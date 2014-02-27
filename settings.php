@@ -26,6 +26,8 @@
 
 defined('MOODLE_INTERNAL') || die;
 
+$systemcontext = context_system::instance();
+
 if (has_capability('moodle/restore:restorecourse', $systemcontext)) {
     $ADMIN->add('courses', new admin_externalpage('tooluploadcourse',
                 get_string('uploadcourses', 'tool_uploadcourse'),
